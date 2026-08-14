@@ -48,7 +48,9 @@ export function Navigation() {
           <div className="flex items-center gap-4">
             {isAuthenticated ? (
               <>
-                <span className="text-sm text-gray-600">Hello, {user?.name}</span>
+                <Link href="/profile">
+                  <Button variant="ghost">{user?.name}</Button>
+                </Link>
                 <Button variant="ghost" onClick={logout}>
                   Logout
                 </Button>
